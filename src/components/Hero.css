@@ -1,0 +1,242 @@
+.hero {
+  position: relative;
+
+  min-height: 100vh;
+  background: #f5eddc;
+
+  padding: 0 8%;
+
+  overflow: hidden;
+}
+
+.navbar {
+  height: 110px;
+
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.hero-flower {
+  position: absolute;
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.hero-flower--title {
+  width: 106.25px;
+  height: 113.73px;
+
+  left: 7.5%;
+  top: 25%;
+
+  transform: rotate(-51.65deg);
+}
+
+.hero-flower--bloom {
+  width: 72.91px;
+  height: 78.52px;
+
+  left: 45%;
+  top: 32%;
+
+  transform: rotate(-4deg);
+}
+
+.hero-flower--matcha-bottom-left {
+  width: 72px;
+  height: 78px;
+
+  left: 58%;
+  top: 82%;
+
+  transform: rotate(-4deg);
+}
+
+.search {
+  width: 370px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 20px;
+
+  background: #ffffff;
+  border-radius: 30px;
+
+  color: #77776f;
+  font-size: 13px;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+
+  margin-left: auto;
+}
+
+.nav-links a {
+  color: #b7bd78;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hero-content {
+  min-height: calc(100vh - 110px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding-bottom: 60px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-image {
+  width: 450px;
+  height: 535px;
+
+  flex-shrink: 0;
+
+  position: relative;      /* было не задано — добавляем, чтобы цветы позиционировались от контейнера */
+  overflow: visible;
+}
+
+.hero-image img  > img:first-child{
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.flower {
+  position: absolute;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.flower-top {
+  width: 110px;
+  height: 118px;
+
+  top: -25px;
+  right: -15px;
+
+  transform: rotate(-4deg);
+}
+
+.flower-mid {
+  width: 150px;
+  height: 160px;
+
+  top: 30%;
+  right: -140px;
+
+  transform: rotate(12deg);
+}
+
+.flower-bottom {
+  width: 130px;
+  height: 138px;
+
+  top: 68%;
+  right: -130px;
+
+  transform: rotate(-18deg);
+}
+
+.hero-text h1 {
+  margin-bottom: 60px;
+
+  color: #b7bd78;
+
+  font-size: 68px;
+  line-height: 0.95;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.hero-text p {
+  margin-bottom: 60px;
+
+  color: #272722;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+}
+
+.order-btn {
+  padding: 15px 32px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #b7bd78;
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.visit-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 15px 30px;
+
+  border: none;
+  border-radius: 30px;
+
+  background: #f28d9b;
+  color: white;
+
+  font-size: 14px;
+
+  cursor: pointer;
+}
+
+.visit-btn span {
+  font-size: 20px;
+  line-height: 1;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}

@@ -1,0 +1,74 @@
+.order-cta {
+  min-height: 796px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 130px;
+}
+
+.order-cta-content {
+  max-width: 560px;
+}
+
+.order-cta-content h2 {
+  margin-bottom: 40px;
+
+  color: #ffffff;
+
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 800;
+}
+
+.order-cta-content p {
+  margin-bottom: 48px;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.order-cta-buttons {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.gift-btn,
+.delivery-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 16px 28px;
+
+  border: none;
+  border-radius: 30px;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+}
+
+.gift-btn {
+  background: #B6BB79;
+  color: #ffffff;
+}
+
+.delivery-btn {
+  background: #F297A0;
+  color: #ffffff;
+}
+
+.gift-btn img,
+.delivery-btn img {
+  width: 18px;
+  height: 18px;
+}
