@@ -10,6 +10,12 @@ function Hero() {
 
       <nav className="navbar">
 
+        <button className="hamburger" aria-label="Open menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <img
           className="logo"
           src={logo}
@@ -27,6 +33,10 @@ function Hero() {
           <a href="#contact">Contact</a>
           <a href="#community">Join Our Community</a>
         </div>
+
+        <button className="search-icon" aria-label="Search">
+          <span></span>
+        </button>
 
       </nav>
 
@@ -81,26 +91,31 @@ function Hero() {
         </div>
 
         <div className="hero-image">
-  <img src={matcha} alt="Matcha latte" />
 
-  <img
-    className="flower flower-top"
-    src={flower}
-    alt=""
-  />
+          <img
+            src={matcha}
+            alt="Matcha latte"
+          />
 
-  <img
-    className="flower flower-mid"
-    src={flower}
-    alt=""
-  />
+          <img
+            className="flower flower-top"
+            src={flower}
+            alt=""
+          />
 
-  <img
-    className="flower flower-bottom"
-    src={flower}
-    alt=""
-  />
-</div>
+          <img
+            className="flower flower-mid"
+            src={flower}
+            alt=""
+          />
+
+          <img
+            className="flower flower-bottom"
+            src={flower}
+            alt=""
+          />
+
+        </div>
 
       </div>
 

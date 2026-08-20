@@ -7,11 +7,6 @@
   text-align: center;
 }
 
-
-/* =========================
-   HEADING
-========================= */
-
 .branches-eyebrow {
   margin: 0 0 12px;
 
@@ -32,11 +27,6 @@
   letter-spacing: -1px;
 }
 
-
-/* =========================
-   CARDS CONTAINER
-========================= */
-
 .branches-grid {
   display: flex;
   align-items: flex-start;
@@ -50,10 +40,9 @@
   margin: 0 auto;
 }
 
-
-/* =========================
-   CARD
-========================= */
+.branches-carousel {
+  display: none;
+}
 
 .branch-card {
   width: 350px;
@@ -71,11 +60,6 @@
 
    margin-top: 30px;
 }
-
-
-/* =========================
-   PHOTO
-========================= */
 
 .branch-photo-wrapper {
   width: 100%;
@@ -96,11 +80,6 @@
   object-fit: cover;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
 .branch-footer {
   display: flex;
   align-items: center;
@@ -120,11 +99,6 @@
 
   white-space: nowrap;
 }
-
-
-/* =========================
-   BUTTON
-========================= */
 
 .find-us-btn {
   display: flex;
@@ -163,11 +137,6 @@
   font-size: 12px;
 }
 
-
-/* =========================
-   CENTER CARD
-========================= */
-
 .branch-card--featured {
   width: 390px;
 
@@ -180,68 +149,75 @@
   border-radius: 195px 195px 18px 18px;
 }
 
-
-/* CENTER PHOTO */
-
 .branch-card--featured .branch-photo-wrapper {
   height: 430px;
 
   border-radius: 175px 175px 0 0;
 }
 
-
-/* CENTER FOOTER */
-
 .branch-card--featured .branch-footer {
   margin-top: 15px;
 }
 
-
-/* =========================
-   RESPONSIVE
-========================= */
-
-@media (max-width: 1200px) {
-
-  .branches {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
+@media (max-width: 768px) {
 
   .branches-grid {
-    gap: 35px;
+    display: none;
   }
 
-  .branch-card {
-    width: 320px;
-  }
-
-  .branch-card--featured {
-    width: 350px;
-  }
-
-}
-
-
-@media (max-width: 950px) {
-
-  .branches {
-    min-height: auto;
-  }
-
-  .branches-grid {
-    flex-direction: column;
+  .branches-carousel {
+    position: relative;
+    display: flex;
     align-items: center;
-    gap: 45px;
+    justify-content: center;
+
+    width: 100%;
   }
 
-  .branch-card--featured {
+  .branches-carousel .branch-card--featured {
+    width: min(100%, 300px);
     margin-top: 0;
-    order: -1;
+  }
+
+  .branches-carousel .branch-card--featured .branch-photo-wrapper {
+    height: 340px;
+  }
+
+  .carousel-arrow {
+    position: absolute;
+    top: 35%;
+    transform: translateY(-50%);
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+    font-size: 22px;
+    color: #272722;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+  .carousel-arrow--prev {
+    left: 4px;
+  }
+
+  .carousel-arrow--next {
+    right: 4px;
   }
 
 }
-
 
 @media (max-width: 500px) {
 
@@ -253,9 +229,8 @@
     font-size: 34px;
   }
 
-  .branch-card,
-  .branch-card--featured {
-    width: min(100%, 350px);
+  .branches-carousel .branch-card--featured {
+    width: 100%;
   }
 
 }

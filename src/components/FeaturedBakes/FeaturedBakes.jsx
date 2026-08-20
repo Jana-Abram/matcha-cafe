@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import './FeaturedBakes.css';
 
 import macaronPink from '../../assets/macaron-pink.png';
@@ -14,6 +15,13 @@ const items = [
 ];
 
 function FeaturedBakes() {
+   const [current, setCurrent] = useState(0);
+
+  const goPrev = () =>
+    setCurrent((prev) => (prev === 0 ? items.length - 1 : prev - 1));
+
+  const goNext = () =>
+    setCurrent((prev) => (prev === items.length - 1 ? 0 : prev + 1));
   return (
     <section className="featured">
       <div className="featured-grid">
@@ -24,6 +32,30 @@ function FeaturedBakes() {
             <p className="item-price">$ {item.price}</p>
           </div>
         ))}
+      </div>
+
+      <div className="featured-carousel">
+        <button
+          className="carousel-arrow carousel-arrow--prev"
+          onClick={goPrev}
+          aria-label="Previous dessert"
+        >
+          ‹
+        </button>
+
+        <div className="featured-item">
+          <img src={items[current].img} alt={items[current].name} />
+          <p className="item-label">{items[current].name}</p>
+          <p className="item-price">$ {items[current].price}</p>
+        </div>
+
+        <button
+          className="carousel-arrow carousel-arrow--next"
+          onClick={goNext}
+          aria-label="Next dessert"
+        >
+          ›
+        </button>
       </div>
 
       <div className="featured-text">
