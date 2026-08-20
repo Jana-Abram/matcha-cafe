@@ -31,7 +31,7 @@
 .featured-grid,
 .featured-text {
   position: relative;
-  z-index: 2;              
+  z-index: 2;            
 }
 
 .featured-grid {
@@ -41,6 +41,10 @@
 
   flex-shrink: 0;
   width: 44%;
+}
+
+.featured-carousel {
+  display: none;
 }
 
 .featured-item img {
@@ -125,4 +129,74 @@
 .view-all-btn span {
   font-size: 20px;
   line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .featured {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    gap: 32px;
+    padding: 60px 24px;
+  }
+
+  .featured-text {
+    order: 1;
+    max-width: 100%;
+    text-align: left;
+  }
+
+  .featured-carousel {
+    order: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+
+    width: 100%;
+  }
+
+  .featured-grid {
+    display: none;
+  }
+
+  .featured-carousel .featured-item {
+    width: 220px;
+    z-index: 3;
+  }
+
+  .carousel-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border: 2px solid #272722;
+    border-radius: 50%;
+    background: none;
+
+    font-size: 22px;
+    color: #272722;
+    line-height: 1;
+
+    cursor: pointer;
+  }
+
+  .featured-text h2 {
+    font-size: 34px;
+  }
+
+  .featured-desc {
+    font-size: 15px;
+  }
+
+  .featured-flower {
+    width: 400px;
+    height: auto;
+    top: 0;
+  }
 }

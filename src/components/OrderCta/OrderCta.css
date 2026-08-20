@@ -72,3 +72,53 @@
   width: 18px;
   height: 18px;
 }
+
+@media (max-width: 768px) {
+
+  .order-cta {
+    min-height: 620px;
+
+    padding: 60px 24px;
+
+    background-position: center;
+  }
+
+  .order-cta-content {
+    max-width: 100%;
+  }
+
+  .order-cta-content h2 {
+    margin-bottom: 24px;
+
+    font-size: 32px;
+    line-height: 1.1;
+  }
+
+  .order-cta-content p {
+    margin-bottom: 32px;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .order-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .gift-btn,
+  .delivery-btn {
+    justify-content: center;
+    padding: 14px 24px;
+  }
+
+}
+
+@media (max-width: 420px) {
+
+  .order-cta-content h2 {
+    font-size: 28px;
+  }
+
+}
